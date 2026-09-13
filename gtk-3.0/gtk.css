@@ -1,0 +1,184 @@
+@define-color text_color #ffffff;
+
+@define-color headerbar_bg #252526;
+@define-color entry_bg #172E59;
+
+@define-color button_bg #264E9E;
+@define-color button_hover #3366CC;
+
+@define-color hi_border_color #FFE400;
+
+@define-color accent_color #3366CC;
+@define-color accent_fg #ffffff;
+
+window {
+    background-image: linear-gradient(#30497A, #213660);
+    color: @text_color;
+}
+
+.background { 
+	color: @text_color; 
+	background-color: #213660; 
+}
+
+.background:backdrop { 
+	color: @text_color; 
+	background-color: #213660; 
+}
+
+
+
+headerbar {
+    background-color: @headerbar_bg;
+    color: @text_color;
+    border-bottom: 1px solid @border_color;
+    min-height: 46px;
+    padding: 0 6px;
+}
+
+headerbar label.title {
+    font-weight: bold;
+}
+
+
+
+menubar > menuitem {
+    transition: all 150ms ease-in-out;
+    padding: 4px 8px;
+}
+
+menu {
+    padding: 6px 2px;
+    background-color: #172E59;
+}
+
+menu > menuitem {
+    transition: all 150ms ease-in-out;
+	padding: 2px 2px;
+    margin: 2px 4px;
+}
+
+menu > menuitem:hover {
+	background-image: linear-gradient(to right, #C7EB91, #2A8187);
+	color: #000;
+    padding: 4px 8px;
+    margin: 2px 4px;
+}
+
+menu > menuitem:disabled,
+menubar > menuitem:disabled {
+	opacity: 0.5;
+}
+
+menubar > menuitem:hover {
+background-image: linear-gradient(to top, #C7EB91, #2A8187);
+	color: #000;
+    padding: 4px 8px;
+}
+
+button {
+	background-image: linear-gradient(#4A6FA6, #2A4987);
+	padding: 2px 2px;
+    color: @text_color;
+    transition: all 150ms ease-in-out;
+    border: 1px solid #313244;
+}
+
+button:hover {
+	background-image: linear-gradient(#C7EB91, #2A8187);
+	padding: 2px 2px;
+    color: #000;
+    border: 1px solid @hi_border_color;
+}
+
+button:active,
+button:checked {
+	background-image: linear-gradient(#FFF8BD, #C6A93D);
+    color: #000;
+    transition: all 20ms ease-in-out;
+    border: 1px solid @accent_color;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+
+
+button.suggested-action {
+    background-color: @accent_color;
+    color: @accent_fg;
+    border: 1px solid @accent_color;
+}
+
+button.destructive-action {
+    background-color: #e74c3c;
+    color: #fff;
+    border: 1px solid #c0392b;
+}
+
+entry {
+    background-color: @entry_bg;
+    color: @text_color;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+entry:focus {
+    border: 1px solid @accent_color;
+}
+
+list, treeview {
+    background-color: #172E59;
+    padding: 1px 1px ;
+    color: @text_color;
+}
+
+notebook > header > tabs > tab {
+	background-image: linear-gradient(#4A6FA6, #2A4987);
+	border-radius: 4px;
+    padding: 2px 8px;
+    margin-right: 4px;
+    transition: all 150ms ease-in-out;
+}
+
+notebook > header > tabs > tab:checked {
+	background-image: linear-gradient(#FFF8BD, #C6A93D);
+	color: black;
+	border: 1px solid @accent_color;
+	border-radius: 4px;
+    margin-right: 4px;
+}
+
+notebook > header > tabs > tab:hover {
+	background-image: linear-gradient(#C7EB91, #2A8187);
+	border: 1px solid @hi_border_color;
+	border-radius: 4px;
+    margin-right: 4px;
+}
+
+treeview.view,
+row {
+	background-color: #1C4474;
+    color: #fff;
+}
+
+row:selected,
+treeview.view:selected {
+	transition: all 150ms ease-in-out;
+	background-color: @accent_color;
+    color: #fff;
+}
+
+scrollbar slider {
+    min-width: 6px;
+    min-height: 6px;
+    background-color: @accent_color;
+    transition: all 150ms ease-in-out;
+    border-radius: 3px;
+}
+
+scrollbar slider:hover {
+    background-image: linear-gradient(#fff, #ccc);
+}
+
